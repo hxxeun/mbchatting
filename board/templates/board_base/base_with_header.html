@@ -1,0 +1,12 @@
+{% extends "board_base/base.html" %}
+
+{% load static %}
+
+{% block header %}
+<header class="site-header only-logo max-content-width">
+  <li><a href="{% url 'index'%}">MBCHATTING</a></li>
+  {% comment %} <a href="#">
+    <img class="logo" src="{% static 'board/assets/board-logo.svg' %}" alt="board Logo">
+  </a> {% endcomment %}
+</header>
+{% endblock header %}

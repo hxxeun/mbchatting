@@ -1,0 +1,67 @@
+{% extends "board_base/base.html" %}
+
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}회원가입{% endblock title %}
+
+{% block content %}
+<div class="account-background">
+  <main class="account">
+    <div class="title">
+      <li><a href="{% url 'index' %}">MBCHATTING</a></li>
+      {% comment %} <a href="{% url 'index'%}">
+        <img class="logo" src="{% static 'board/assets/coplate-logo.svg' %}" alt="board Logo">
+      </a> {% endcomment %}
+    </div>
+
+    <form method="post">
+      {% csrf_token %}
+      <div>
+        {{ form.email|add_class:"cp-input"|attr:"placeholder:이메일"|add_error_class:"error" }}
+        {% for error in form.email.errors %}
+          <div class="error-message">{{ error }}</div>
+        {% endfor%}
+      </div>
+      <div>
+        {{ form.nickname|add_class:"cp-input"|attr:"placeholder:닉네임"|add_error_class:"error"}}
+        {% for error in form.nickname.errors %}
+          <div class="error-message">{{ error }}</div>
+        {% endfor%}
+      </div> 
+      {% comment %} <div>
+        {{ form.mbti|add_class:"cp-input"|attr:"placeholder:mbti"|add_error_class:"error"}}
+        {% for error in form.mbti.errors %}
+          <div class="error-message">{{ error }}</div>
+        {% endfor%}
+      </div> 
+      <div>
+        <li><a href="https://www.16personalities.com/ko">mbti 확인</a></li>
+      </div> {% endcomment %}
+      <div>
+        {{ form.password1|add_class:"cp-input"|attr:"placeholder:비밀번호"|add_error_class:"error"}}
+        {% for error in form.password1.errors %}
+          <div class="error-message">{{ error }}</div>
+        {% endfor%}
+      </div>
+      <div>
+        {{ form.password2|add_class:"cp-input"|attr:"placeholder:비밀번호 확인"|add_error_class:"error"}}
+        {% for error in form.password2.errors %}
+          <div class="error-message">{{ error }}</div>
+        {% endfor%}
+      </div>
+      {% comment %} <div class="profile">
+        <div class="profile-pic cp-avatar large" style="background-image: url('{{ user.profile_pic.url }}')"></div>
+        <div class="file">
+          학생 인증 {{ form.profile_img }} 
+        </div>
+      </div> {% endcomment %}
+      <button class="cp-button" type="submit">회원가입</button>
+    </form>
+
+    <div class="info">
+      이미 회원이신가요?<a class="link" href="{% url 'account_login' %}">로그인</a>
+    </div>
+  </main>
+</div>
+{% endblock content %}
