@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # board
     path('', include('board.urls')),
+    # chat
+    path('chat/', include("chat.urls")),
     # allauth
     path(
         "email-confirmation-required/",

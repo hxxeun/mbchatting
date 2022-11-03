@@ -33,7 +33,7 @@
       {% endfor %}
     </div>
     <div class="buttons">
-      <a class="cp-button secondary cancel" href="{% url 'profile' user.id %}">취소</a>
+      <a class="cp-button secondary cancel" href="{% url 'board:profile' user.id %}">취소</a>
       <button class="cp-button" type="submit">완료</button>
     </div>
   </form>

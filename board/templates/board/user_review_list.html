@@ -39,7 +39,7 @@
     </div>
 
     <div class="wrap-pagination">    
-      <a class="cp-ic-button circle backbutton" href="{% url 'profile' profile_user.id %}">프로필로 돌아가기</a>
+      <a class="cp-ic-button circle backbutton" href="{% url 'board:profile' profile_user.id %}">프로필로 돌아가기</a>
       {% if is_paginated %}
         <ul class="pagination">
           {% if page_obj.has_previous %}

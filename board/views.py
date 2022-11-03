@@ -44,7 +44,7 @@ class ReviewCreateView(LoginAndVerificationRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse("review-detail", kwargs={"review_id": self.object.id})
+        return reverse("board:review-detail", kwargs={"review_id": self.object.id})
 
         
 
@@ -56,7 +56,7 @@ class ReviewUpdateView(LoginAndOwnershipRequiredMixin, UpdateView):
 
 
     def get_success_url(self):
-        return reverse("review-detail", kwargs={"review_id": self.object.id})
+        return reverse("board:review-detail", kwargs={"review_id": self.object.id})
 
 
 
@@ -66,7 +66,7 @@ class ReviewDeleteView(LoginAndOwnershipRequiredMixin, DeleteView):
     pk_url_kwarg = "review_id"
 
     def get_success_url(self):
-        return reverse("index")
+        return reverse("board:index")
 
 
 class CommentCreateView(LoginAndVerificationRequiredMixin, CreateView):
@@ -81,7 +81,7 @@ class CommentCreateView(LoginAndVerificationRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('review-detail', kwargs={'review_id': self.kwargs.get('review_id')})
+        return reverse('board:review-detail', kwargs={'review_id': self.kwargs.get('review_id')})
 
 class CommentUpdateView(LoginAndOwnershipRequiredMixin, UpdateView):
     model = Comment
@@ -90,7 +90,7 @@ class CommentUpdateView(LoginAndOwnershipRequiredMixin, UpdateView):
     pk_url_kwarg = 'comment_id'
 
     def get_success_url(self):
-        return reverse('review-detail', kwargs={'review_id': self.object.review.id})
+        return reverse('board:review-detail', kwargs={'review_id': self.object.review.id})
 
 
 class CommentDeleteView(LoginAndOwnershipRequiredMixin, DeleteView):
@@ -99,7 +99,7 @@ class CommentDeleteView(LoginAndOwnershipRequiredMixin, DeleteView):
     pk_url_kwarg = 'comment_id'
 
     def get_success_url(self):
-        return reverse('review-detail', kwargs={'review_id': self.object.review.id})
+        return reverse('board:review-detail', kwargs={'review_id': self.object.review.id})
 
 
 class ProfileView(DetailView):
@@ -138,7 +138,7 @@ class ProfileSetView(LoginRequiredMixin, UpdateView):
         return self.request.user
 
     def get_success_url(self):
-        return reverse("index")
+        return reverse("board:index")
 
 class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     model = User
@@ -149,8 +149,8 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
         return self.request.user
 
     def get_success_url(self):
-        return reverse("profile", kwargs=({"user_id": self.request.user.id}))
+        return reverse("board:profile", kwargs=({"user_id": self.request.user.id}))
 
 class CustomPasswordChangeView(LoginRequiredMixin, PasswordChangeView):
     def get_success_url(self):
-        return reverse("proile", kwargs=({"user_id": self.request.user.id}))
+        return reverse("board:proile", kwargs=({"user_id": self.request.user.id}))

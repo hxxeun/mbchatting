@@ -12,12 +12,12 @@
   <div class="content-list max-content-width">
     <div class="header">
       <h2>게시글</h2>
-      <a class="cp-ic-button circle newreview" href="{% url 'review-create' %}">글 작성</a>
+      <a class="cp-ic-button circle newreview" href="{% url 'board:review-create' %}">글 작성</a>
     </div>
 
       <div class="contents">
       {% for review in reviews %}
-        <a href="{% url 'review-detail' review.id %}">
+        <a href="{% url 'board:review-detail' review.id %}">
             <section class="cp-card content">
               {% if review.image1 %}
               <div class="thumb" style="background-image: url('{{ review.image1.url }}');"></div>

@@ -14,7 +14,7 @@
       </div> {% endcomment %}
       <h1 class="title">{{ review.title}}</h1>
       <div class="author">
-        <a class="review-author" href="{% url 'profile' review.author.id %}">
+        <a class="review-author" href="{% url 'board:profile' review.author.id %}">
           <div class="cp-avatar" style="background-image: url('{{ review.author.profile_pic.url }}')"></div>
           <span>{{ review.author.nickname}}</span>
         </a>
@@ -58,13 +58,13 @@
           <span> 댓글 {{ review.comments.count }}</span>
         </div>
       </div>
-      <form class="comment-create-form" action="{% url 'comment-create' review.id %}" method="post">
+      <form class="comment-create-form" action="{% url 'board:comment-create' review.id %}" method="post">
         {% csrf_token %}
         {% if user.is_authenticated %}
           {{ form.content|attr:"placeholder:댓글 내용을 입력해주세요."|add_class:"cp-input" }}
           <button class="cp-button small" type="submit">등록</button>
         {% else %}
-          <a href = "{% url 'account_login' %}?next={% url 'review-detail' review.id %}"
+          <a href = "{% url 'board:account_login' %}?next={% url 'board:review-detail' review.id %}"
             {{ form.content|attr:"placeholder:댓글을 작성하려면 로그인이 필요합니다."|add_class:"cp-input"|attr:"disabled" }}
           </a>
           <button class="cp-button small secondary" type="submit" disabled>등록</button>
@@ -74,7 +74,7 @@
         {% for comment in review.comments.all %}
           <div class="comment">
             <div class="comment-header">
-              <a href="{% url 'profile' comment.author.id %}">
+              <a href="{% url 'board:profile' comment.author.id %}">
                 <div class="author">
                   <div class="cp-avatar" style="background-image: url('{{ comment.author.profile_pic.url }}')"></div>
                   <span>{{ comment.author.nickname }}</span>
@@ -82,9 +82,9 @@
               </a>
               {% if user == comment.author %}
                 <div class="buttons">
-                  <a href="{% url 'comment-delete' comment.id %}">삭제</a>
+                  <a href="{% url 'board:comment-delete' comment.id %}">삭제</a>
                   <span> | </span>
-                  <a href="{% url 'comment-update' comment.id %}">수정</a>
+                  <a href="{% url 'board:comment-update' comment.id %}">수정</a>
                 </div>
               {% endif %}
             </div>
@@ -108,8 +108,8 @@
     {% if review.author == user %}
       <div class="footer">
         <div class="buttons">
-          <a class="cp-button warn" href="{% url 'review-delete' review.id%}">삭제</a>
-          <a class="cp-button secondary" href="{% url 'review-update' review.id %}">수정</a>
+          <a class="cp-button warn" href="{% url 'board:review-delete' review.id%}">삭제</a>
+          <a class="cp-button secondary" href="{% url 'board:review-update' review.id %}">수정</a>
         </div>
       </div>
     {% endif %}
