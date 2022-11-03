@@ -41,7 +41,7 @@ urlpatterns = [
         CustomPasswordChangeView.as_view(), 
         name="account_password_change",),
     path('', include('allauth.urls')),
-]
 
+]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

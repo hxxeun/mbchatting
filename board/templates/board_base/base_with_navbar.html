@@ -11,6 +11,8 @@
     <li><a href="{% url 'index' %}">MBCHATTING</a></li>
     <nav>
       <ul class="navbar">
+        <li>채팅하기 </li>
+        <li>게시판 목록</li>
         {% if user.is_authenticated %}
         <li><a href="{% url 'profile' user.id %}">내 프로필</a></li>
           <li><a href="{% url 'account_logout' %} ">로그아웃</a></li>
