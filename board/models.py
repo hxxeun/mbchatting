@@ -34,18 +34,7 @@ class User(AbstractUser):
 
 class Review(models.Model):
     title = models.CharField(max_length=30)
-    # restaurant_name = models.CharField(max_length=20)
-    # restaurant_link = models.URLField(validators=[validate_restaurant_link])
 
-
-    # RATING_CHOICES = [
-    #     (1,"★"),
-    #     (2,"★★"),
-    #     (3,"★★★"),
-    #     (4,"★★★★"),
-    #     (5,"★★★★★"),
-    # ]
-    # rating = models.IntegerField(choices=RATING_CHOICES, default=None)
 
     image1 = models.ImageField(upload_to="review_pics", blank=True)
     image2 = models.ImageField(upload_to="review_pics", blank=True)
