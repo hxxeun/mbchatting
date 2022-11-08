@@ -16,7 +16,7 @@ from board.forms import ReviewForm, ProfileForm, CommentForm
 # Create your views here.
 
 class IndexView(ListView):
-    model = Review
+    model = Re  view
     template_name = "board/index.html"
     context_object_name = "reviews"
     paginate_by = 4
