@@ -34,7 +34,6 @@ class ProfileForm(forms.ModelForm):
             # "nickname",
             "profile_pic",
             "intro",
-            "profile_img",
             "mbti",
         ]
         widgets = {
