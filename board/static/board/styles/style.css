@@ -669,7 +669,7 @@ ul.navbar li {
 
 .profile-form .logo {
   margin: auto;
-  width: 110px;
+  width: 170px;
 }
 
 .profile-form .welcome-message {
@@ -759,9 +759,9 @@ ul.navbar li {
   --border: #979797;
   --light-border: #e3e1dc;
   --max-post-width: 880px;
-  --max-content-width: 1060px;
+  --max-content-width: 100px;
   --body-background: #fffeda;
-  --site-header-background: #ffffff;
+  --site-header-background: #fffeda;
   --site-body-border-top: #883ff9;
   --site-header-border-bottom: #d9d9d9;
   --site-header-user-menu-hover: #7644c3;
@@ -806,8 +806,7 @@ body.with-border {
 
 body.with-background {
   background-image:
-    url('../assets/bg-left.svg'),
-    url('../assets/bg-right.svg');
+    url('../assets/main-bg.jpg');
   background-position:
     top 333px left 0,
     top 109px right 0;
