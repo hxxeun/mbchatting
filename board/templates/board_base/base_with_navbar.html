@@ -8,7 +8,8 @@
     {% comment %} <a href="{% url 'board:index' %} ">
       <img class="logo" src="{% static 'board/assets/board-logo.svg' %}" alt="board Logo">
     </a> {% endcomment %}
-    <li><a href="{% url 'board:index' %}">MBCHATTING</a></li>
+    <a href="{% url 'board:index' %}"><img class="logo" src="{% static 'board/assets/logo.jpg' %}" alt="board Logo" style="
+      padding-left: 50px; width: 250px;"></a>
     <nav>
       <ul class="navbar">
         {% if user.is_authenticated %}

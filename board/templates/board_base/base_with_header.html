@@ -4,7 +4,7 @@
 
 {% block header %}
 <header class="site-header only-logo max-content-width">
-  <li><a href="{% url 'board:index'%}">MBCHATTING</a></li>
+  <a href="{% url 'board:index'%}"><img class="logo" src="{% static 'board/assets/logo.jpg' %}" alt="board Logo"></a>
   {% comment %} <a href="#">
     <img class="logo" src="{% static 'board/assets/board-logo.svg' %}" alt="board Logo">
   </a> {% endcomment %}
