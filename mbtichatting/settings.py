@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 ]
-
 SITE_ID = 1
 
 MIDDLEWARE = [
@@ -151,4 +150,11 @@ ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = "account_email_confirmation_
 ACCOUNT_EMAIL_SUBJECT_PREFIX = ""
 # Email settings
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "mbchating0@gmail.com"
+EMAIL_HOST_PASSWORD = "qbiheogxrupscgsp"
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
