@@ -30,6 +30,10 @@
     margin: 0;
     background-color: var(--body-background);
     word-break: keep-all;
+    background-repeat: repeat;
+    background-position: top;
+    background-size: 1800px;
+    background-image: url("../assets/main-fg.svg");
   }
   
   body > .site-body {
@@ -601,7 +605,7 @@
   
   .account .info .link {
     margin-left: 13px;
-    color: var(--account-link);
+    color: #ffbb00;
   }
   
   .account form {

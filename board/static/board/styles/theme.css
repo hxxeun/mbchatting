@@ -29,7 +29,6 @@
   --dialog-border: #ad965a;
   --dialog-background: #f6f5f3;
   --dialog-info: #e1811b;
-  --box-border: #ad965a;
 }
 
 * {
@@ -320,6 +319,20 @@ textarea.cp-input {
   padding: 68px 145px;
   border-radius: 6px;
   border: solid 2px var(--box-border);
+  background-color:#ffdf87;
+}
+
+.cp-box .cp-button {
+  border: none;
+  outline: none;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  cursor: pointer;
+  background-color: #fff3c7;
+  color: var(--button-text);
 }
 
 /* Icon */
