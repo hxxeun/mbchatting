@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     # review url
     path('', views.IndexView.as_view(), name='index'),
+    path('search/', views.SearchView.as_view(), name='search'),
     path(
         "reviews/<int:review_id>/",
         views.ReviewDetailView.as_view(),

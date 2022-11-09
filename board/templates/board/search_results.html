@@ -6,7 +6,7 @@
 <main class="site-body">
   <div class="content-list max-content-width">
     <form class="search-form" action="{% url 'search' %}" method="get">
-      <input class="search-input" name="query" type="text" placeholder="식당, 음식 등을 검색해보세요" required>
+      <input class="search-input" name="query" value="{{ query }}" type="text" placeholder="게시글을 검색해보세요" required>
       <button class="cp-button search-button" type="submit">검색</button>
     </form>
     <div class="header">
