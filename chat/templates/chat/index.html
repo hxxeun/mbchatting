@@ -4,10 +4,55 @@
 {% block title %}Chat Room{% endblock title %}
 
 {% block content %}
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<style>
+.card-footer{
+border-radius: 0 0 15px 15px !important;
+    border-top: 0 !important;
+    width: 700px;
+    margin: 0 auto;
+}
+.type_msg{
+    background-color: rgb(255, 211, 36) !important;
+    border:0 !important;
+    color:white !important;
+    height: 60px !important;
+    overflow-y: auto;
+}
+.send_btn{
+border-radius: 0 15px 15px 0 !important;
+background-color: rgb(255, 211, 36) !important;
+    border:0 !important;
+    color: white !important;
+    cursor: pointer;
+}
+label{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+</style>
+</head>
+<body>
 <main class="site-body">
-    채팅하고 싶은 상대의 mbti를 입력하세요 <br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+
+    <div class="card-footer">
+        <label>채팅하고 싶은 상대의 MBTI를 입력해주세요</label>
+        <div class="input-group">
+            <input id="room-name-input" type="text" size="100" class="form-control type_msg"></input>
+            <div class="input-group-append">
+                <span class="input-group-text send_btn"><input type="button" id="room-name-submit" class="chat-message-submit" style="background-color: transparent; border:0px"><i class="fas fa-location-arrow"></i></input></span>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.querySelector('#room-name-input').focus();
@@ -23,4 +68,5 @@
         };
     </script>
 </main>
+</body>
 {% endblock content %}
