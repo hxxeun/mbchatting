@@ -23,6 +23,7 @@ def contains_number(value):
     return True
 
 
+            
 class CustomPasswordValidator:
     def validate(self, password, user=None):
         if (
@@ -42,6 +43,11 @@ def validate_no_special_characters(value):
     if contains_special_character(value):
         raise ValidationError("특수문자를 포함할 수 없습니다.")
 
+def validate_email(value):
+    if not "hongik.ac.kr" in value:
+        raise ValidationError("학교 이메일이 아닙니다.")
+    else:
+        return value
 
 # def validate_restaurant_link(value):
 #     if "place.nvaer.com" not in value and "place.map.kakao.com" not in value:

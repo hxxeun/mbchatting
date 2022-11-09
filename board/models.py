@@ -3,11 +3,12 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
-from .validators import validate_no_special_characters
+from .validators import validate_no_special_characters, validate_email
 # from .validators import validate_no_special_characters, validate_restaurant_link
 # Create your models here.
 
 class User(AbstractUser):
+    mail = models.CharField(max_length=60, unique=True, null=True, validators=[validate_email], error_messages ={'unique': '이미 사용중인 이메일입니다.'})
     nickname = models.CharField(
         max_length=15, 
         unique=True, 

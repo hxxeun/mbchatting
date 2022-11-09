@@ -24,6 +24,12 @@
         {% endfor%}
       </div>
       <div>
+        {{ form.mail|add_class:"cp-input"|attr:"placeholder:이메일 확인"|add_error_class:"error" }}
+        {% for error in form.mail.errors %}
+          <div class="error-message">{{ error }}</div>
+        {% endfor%}
+      </div>
+      <div>
         {{ form.nickname|add_class:"cp-input"|attr:"placeholder:닉네임"|add_error_class:"error"}}
         {% for error in form.nickname.errors %}
           <div class="error-message">{{ error }}</div>

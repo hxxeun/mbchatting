@@ -4,9 +4,10 @@ from .models import User, Review, Comment
 class SignupForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ["nickname",]
+        fields = ["mail", "nickname",]
 
     def signup(self, request, user):
+        user.mail = self.cleaned_data["mail"]
         user.nickname = self.cleaned_data["nickname"]
         user.save()
 
