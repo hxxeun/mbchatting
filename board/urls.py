@@ -47,4 +47,9 @@ urlpatterns = [
         views.CommentDeleteView.as_view(), 
         name='comment-delete'
     ),
+    path(
+        'like/<int:content_type_id>/<int:object_id>/',
+        views.ProcessLikeView.as_view(),
+        name='process-like'
+    ),
 ]
