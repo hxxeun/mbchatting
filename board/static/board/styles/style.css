@@ -11,7 +11,6 @@
     --content-list-contet-date: #bcb9b0;
     --main-header-background: #ffdf87;
     --main-header-height: 565px;
-    --main-header-border: #f0efec;
     --main-header: #fff;
     --content-list-sub-heading: #7b776b;
     --content-list-pagination-current: #fff;
@@ -19,7 +18,6 @@
     --review-detail-date: #bcb9b0;
     --review-detail-side-padding: 8px;
     --profile-header-edit: #7b776b;
-    --file-content-border: #cccac3;
     --file-content-background: #ffdf87;
   }
   
@@ -44,7 +42,7 @@
   
   .site-header.navbar {
     background-color: var(--site-header-background);
-    border-bottom: solid 1px var(--border);
+    border-bottom: solid 1px #d2cbb5;
     position: sticky;
     top: 0;
     left: 0;
