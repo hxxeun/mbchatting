@@ -23,7 +23,7 @@ border-radius: 0 0 15px 15px !important;
 .type_msg{
     background-color: #ffdf87 !important;
     border:0 !important;
-    color:white !important;
+    color:rgb(0, 0, 0) !important;
     height: 60px !important;
     overflow-y: auto;
 }
@@ -45,9 +45,9 @@ label{
 <main class="site-body">
 
     <div class="card-footer">
-        <label>채팅하고 싶은 상대의 MBTI를 입력해주세요.</label>
+        <label>검색하시려는 채팅방의 이름을 입력해주세요.</label>
         <div class="input-group">
-            <input id="room-name-input" type="text" size="100" class="form-control type_msg"></input>
+            <input id="room-name-input" type="text" size="100" class="form-control type_msg" placeholder="채팅방 이름"></input>
             <div class="input-group-append">
                 <span class="input-group-text send_btn"><input type="button" id="room-name-submit" class="chat-message-submit" style="background-color: transparent; border:0px"><i class="fas fa-location-arrow"></i></input></span>
             </div>
