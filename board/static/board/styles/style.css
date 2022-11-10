@@ -1,5 +1,5 @@
 :root {
-  --border: #e3e1dc;
+  --border: #ad965a;
   --max-width: 1100px;
   --max-content-width: 1000px;
   --body-background: #fcfcfc;
@@ -7,20 +7,18 @@
   --navbar: #2f2c28;
   --site-footer: #bcb9b0;
   --site-footer-background: #2f2c28;
-  --account-link: #ffcc00;
+  --account-link: #ffdf87;
   --content-list-contet-date: #bcb9b0;
-  --main-header-background: #fff;
+  --main-header-background: #ffdf87;
   --main-header-height: 565px;
-  --main-header-border: #f0efec;
   --main-header: #fff;
   --content-list-sub-heading: #7b776b;
   --content-list-pagination-current: #fff;
-  --content-list-pagination-current-bg: #ffcc00;
+  --content-list-pagination-current-bg: #ffdf87;
   --review-detail-date: #bcb9b0;
   --review-detail-side-padding: 8px;
   --profile-header-edit: #7b776b;
-  --file-content-border: #cccac3;
-  --file-content-background: #fff;
+  --file-content-background: #ffdf87;
 }
 
 /* site */
@@ -32,6 +30,10 @@ body {
   margin: 0;
   background-color: var(--body-background);
   word-break: keep-all;
+  background-repeat: repeat;
+  background-position: top;
+  background-size: 1800px;
+  background-image: url("../assets/main-fg.svg");
 }
 
 body > .site-body {
@@ -44,7 +46,7 @@ body > .site-body {
 
 .site-header.navbar {
   background-color: var(--site-header-background);
-  border-bottom: solid 1px var(--border);
+  border-bottom: solid 1px #d2cbb5;
   position: sticky;
   top: 0;
   left: 0;
@@ -256,12 +258,12 @@ ul.navbar li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
+  background-color: #fff3c7;
   background-image: url("../assets/main-bg.jpg");
 }
 
@@ -603,7 +605,7 @@ ul.navbar li {
 
 .account .info .link {
   margin-left: 13px;
-  color: var(--account-link);
+  color: #ffbb00;
 }
 
 .account form {
@@ -757,11 +759,11 @@ ul.navbar li {
 :root {
   --text: #403a45;
   --border: #979797;
-  --light-border: #e3e1dc;
+  --light-border: #ad965a;
   --max-post-width: 880px;
   --max-content-width: 1060px;
-  --body-background: #fafafa;
-  --site-header-background: #ffffff;
+  --body-background: #fff3c7;
+  --site-header-background: #fff3c7;
   --site-body-border-top: #883ff9;
   --site-header-border-bottom: #d9d9d9;
   --site-header-user-menu-hover: #7644c3;
@@ -778,7 +780,7 @@ ul.navbar li {
   --post-status: #ffffff;
   --post-status-background: #b9b7ba;
   --comment-like-info-border: #2f2c28;
-  --comment-border: #e3e1dc;
+  --comment-border: #ad965a;
   --profile-follow-button: #7644c3;
   --profile-follow-button-secondary: #bcb9b0;
   --search-input-background: #ececec;

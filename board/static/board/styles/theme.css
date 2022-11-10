@@ -5,31 +5,30 @@
 
 :root {
   --text: #2f2c28;
-  --link: #ffcc00;
-  --button-text: #fff;
-  --button-primary-background: #ffcc00;
+  --link: #ffdf87;
+  --button-text: rgb(0, 0, 0);
+  --button-primary-background: #ffdf87;
   --button-primary-hover-background: #ffe680;
   --button-warn-background: #f9592c;
   --button-secondary-background: #bcb9b0;
-  --ic-button-circle: #ffcc00;
+  --ic-button-circle: #ffdf87;
   --input-background: #fff;
   --input-border: #cccac3;
   --input-placeholder: #bcb9b0;
-  --input-focus-border: #ffcc00;
+  --input-focus-border: #ffdf87;
   --input-focus-background: #fffdf3;
   --input-error: #e6584e;
   --input-error-border: #e6584e;
-  --chip-border: #e3e1dc;
+  --chip-border: #ad965a;
   --chip-text: #2f2c28;
   --chip-green-background: #effaf9;
   --chip-green-text: #79c9c5;
   --chip-green-border: #06aea7;
-  --avatar-placeholder: #e3e1dc;
-  --stars: #ffcc00;
-  --dialog-border: #e3e1dc;
+  --avatar-placeholder: #ad965a;
+  --stars: #ffdf87;
+  --dialog-border: #ad965a;
   --dialog-background: #f6f5f3;
   --dialog-info: #e1811b;
-  --box-border: #e3e1dc;
 }
 
 * {
@@ -320,6 +319,20 @@ textarea.cp-input {
   padding: 68px 145px;
   border-radius: 6px;
   border: solid 2px var(--box-border);
+  background-color:#ffdf87;
+}
+
+.cp-box .cp-button {
+  border: none;
+  outline: none;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  cursor: pointer;
+  background-color: #fff3c7;
+  color: var(--button-text);
 }
 
 /* Icon */

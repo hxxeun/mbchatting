@@ -3,10 +3,13 @@
 {% load static %}
 
 {% block header %}
-<header class="site-header only-logo max-content-width">
-  <li><a href="{% url 'index'%}">MBCHATTING</a></li>
-  {% comment %} <a href="#">
-    <img class="logo" src="{% static 'board/assets/board-logo.svg' %}" alt="board Logo">
-  </a> {% endcomment %}
+<header class="site-header navbar">
+  <div class="content max-width">
+    {% comment %} <a href="{% url 'index' %} ">
+      <img class="logo" src="{% static 'board/assets/board-logo.svg' %}" alt="board Logo">
+    </a> {% endcomment %}
+    <a href="{% url 'index' %}"><img class="logo" src="{% static 'board/assets/logo.jpg' %}" alt="board Logo" style="
+      padding-left: 50px; width: 250px;"></a>
+  </div>
 </header>
 {% endblock header %}
