@@ -8,12 +8,12 @@
     {% comment %} <a href="{% url 'board:index' %} ">
       <img class="logo" src="{% static 'board/assets/board-logo.svg' %}" alt="board Logo">
     </a> {% endcomment %}
-    <li><a href="{% url 'board:index' %}">MBCHATTING</a></li>
+    <li><a href="{% url 'index' %}">MBCHATTING</a></li>
     <nav>
       <ul class="navbar">
         {% if user.is_authenticated %}
         <li><a href="{% url 'chat:index' %}">채팅하기</a></li>
-        <li><a href="{% url 'board:profile' user.id %}">내 프로필</a></li>
+        <li><a href="{% url 'profile' user.id %}">내 프로필</a></li>
           <li><a href="{% url 'account_logout' %} ">로그아웃</a></li>
         {% else %}
           <li><a href="{% url 'account_login' %}">로그인</a></li>

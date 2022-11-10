@@ -43,6 +43,11 @@ def validate_no_special_characters(value):
         raise ValidationError("특수문자를 포함할 수 없습니다.")
 
 
+def validate_email(value):
+    if not "hongik.ac.kr" in value:
+        raise ValidationError("학교 이메일이 아닙니다.")
+    else:
+        return value
 # def validate_restaurant_link(value):
 #     if "place.nvaer.com" not in value and "place.map.kakao.com" not in value:
 #         raise ValidationError("place.naver.com 또는 place.map.kakao.com이 들어가야 합니다.")

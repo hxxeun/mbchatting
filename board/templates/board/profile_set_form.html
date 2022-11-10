@@ -8,9 +8,9 @@
 {% block content %}
 <div class="account-background">
   <main class="profile-form">
-    <div class="logo">
+    {% comment %} <div class="logo">
       <img class="logo" src="{% static 'board/assets/board-logo.svg' %}" alt="board Logo">
-    </div>
+    </div> {% endcomment %}
     <p class="welcome-message">
       환영합니다! <strong>프로필</strong>을 작성해주세요
     </p>
@@ -35,19 +35,13 @@
         {% endfor%}
       </div> 
       <div>
-        <li><a href="https://www.16personalities.com/ko" target="_blank">mbti 확인하러 가기</a></li>
+        <li><a href="https://www.16personalities.com/ko">mbti 확인</a></li>
       </div>
       <div class="content">
         {{ form.intro|add_class:"cp-input"|add_error_class:"error"|attr:"placeholder:자신을 소개해 주세요!" }}
         {% for error in form.intro.errors %}
           <div class="error-message">{{ error }}</div>
         {% endfor %}
-      </div>
-      <div class="profile">
-        {% comment %} <div class="profile-pic cp-avatar large" style="background-image: url('{{ user.profile_pic.url }}')"></div> {% endcomment %}
-        <div class="file">
-          학생 인증 {{ form.profile_img }} 
-        </div>
       </div>
       <div class="buttons">
         <button class="cp-button" type="submit">완료</button>

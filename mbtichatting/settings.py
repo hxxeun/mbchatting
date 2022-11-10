@@ -141,8 +141,8 @@ AUTHENTICATION_BACKENDS = [
 # 비밀번호 바꾸기 뒤 연결 url (pssword_reset_from_key.html)
 # 프로필 수정 후 완료 버튼 누르고 연결 url
 
-ACCOUNT_SIGNUP_REDIRECT_URL = 'board:profile-set'
-LOGIN_REDIRECT_URL = 'board:index'
+ACCOUNT_SIGNUP_REDIRECT_URL = 'profile-set'
+LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = "account_login"
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
@@ -157,7 +157,14 @@ ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = "account_email_confirmation_
 ACCOUNT_EMAIL_SUBJECT_PREFIX = ""
 # Email settings
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "mbchating0@gmail.com"
+EMAIL_HOST_PASSWORD = "qbiheogxrupscgsp"
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 
 
 # Daphne

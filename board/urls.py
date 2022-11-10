@@ -1,11 +1,12 @@
 from django.urls import path
 from . import views
 
-app_name = 'board'
+
 
 urlpatterns = [
     # review url
     path('', views.IndexView.as_view(), name='index'),
+    path('search/', views.SearchView.as_view(), name='search'),
     path(
         "reviews/<int:review_id>/",
         views.ReviewDetailView.as_view(),
@@ -48,5 +49,10 @@ urlpatterns = [
         'comments/<int:comment_id>/delete/', 
         views.CommentDeleteView.as_view(), 
         name='comment-delete'
+    ),
+    path(
+        'like/<int:content_type_id>/<int:object_id>/',
+        views.ProcessLikeView.as_view(),
+        name='process-like'
     ),
 ]
